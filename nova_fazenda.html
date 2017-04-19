@@ -1,0 +1,82 @@
+<html ng-app="APP" ng-init="tab=4">
+    <head>
+        <meta charset="utf-8" />
+        <title>AGRODEZ</title>
+        <script src="angular.js"></script>
+        <script src="angular-locale_pt-br.js"></script>
+        <script src="nova_fazenda.js"></script>
+        <script src="vendor/jquery.js"></script>
+        <script src="vendor/leaflet/leaflet.js"></script>
+        <script src="vendor/leaflet-draw/leaflet.draw.js"></script>
+        <script src="vendor/leaflet-plugins/layer/tile/Google.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/leaflet/leaflet.css">
+        <link rel="stylesheet" type="text/css" href="vendor/leaflet-draw/leaflet.draw.css">
+        <script src="mapa.js"></script>
+    </head>
+    <body>
+        <div ng-include="'menu.html'" class="absolute"></div>
+        <div id="header">
+            <h1>NOVA FAZENDA</h1>
+        </div>
+        <div id="info">
+            <h3>In&iacute;cio / Lista das Fazendas</h3>
+        </div>
+        <div id="corpo" ng-controller="ctrl">
+            <div class="formulario">
+                <table>
+                    <tr>
+                        <td>Fazenda:</td><td><input type="text" id="id_fazenda" ng-model="fazenda.nm_fazenda"/></td>
+                    </tr>
+                    <tr>
+                        <td>Área Total:</td><td><input type="number" step="any" min="0" ng-model="fazenda.area_total"/></td>
+                    </tr>
+                    <tr>
+                        <td>Área Produtiva:</td><td><input type="number" step="any" min="0" ng-model="fazenda.area_produtiva"/></td>
+                    </tr>
+                    <tr>
+                        <td>Reserva Averbada:</td><td><input type="number" step="any" min="0" ng-model="fazenda.area_reserva"/></td>
+                    </tr>
+                    <tr>
+                        <td>Unidade de medida:</td><td><select  ng-model="fazenda.unidade_area" ng-options="unidade for unidade in unidades"><option value="">Selecione uma unidade de medida</option></select></td>
+                    </tr>
+                    <tr>
+                        <td>Valor por Hectare:</td><td><input type="number" step="any" min="0" ng-model="fazenda.valor_por_hectare"/></td>
+                    </tr>
+                    <tr>
+                        <td>Proprietário:</td><td><input type="text" ng-model="fazenda.proprietario"/></td>
+                    </tr>
+                    <tr>
+                        <td>CNPJ:</td><td><input type="text" ng-model="fazenda.CNPJ"/></td>
+                    </tr>
+                    <tr>
+                        <td>Rodovia:</td><td><input type="text" ng-model="fazenda.rodovia"/></td>
+                    </tr>
+                    <tr>
+                        <td>Município:</td><td><input type="text" ng-model="fazenda.municipio"/></td>
+                    </tr>
+                    <tr>
+                        <td>Estado:</td><td><input type="text" ng-model="fazenda.estado"/></td>
+                    </tr>
+                    <tr>
+                        <td>País:</td><td><input type="text" ng-model="fazenda.nacionalidade"/></td>
+                    </tr>
+                    <tr>
+                        <td>Telefone:</td><td><input type="text" ng-model="fazenda.telefone"/></td>
+                    </tr>
+                    <tr>
+                        <td>Geometria:</td><td><textarea id="id_geometria" readonly="readonly" ng-model="fazenda.geometria"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><div id="map" class="span12" style="height: 400px"></div></td>
+                    </tr>
+                </table>
+                <button ng-click="Salvar(fazenda)">Salvar</button>
+                <button ng-click="Voltar()">Voltar</button>
+            </div>
+        </div>
+        <script>
+        mapaedita($('#id_fazenda').val());
+        </script>
+    </body>
+</html>

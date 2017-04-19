@@ -1,0 +1,209 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body {
+	background-color:#F8F1E9;
+	font-family:"Open Sans", "MS Serif", "New York", serif;
+
+}
+a:link{
+	text-decoration:none;
+	color:#1F5616;
+}
+a:active{
+	text-decoration:none;
+	color:#1F5616;
+}
+a:hover{
+	text-decoration:none;
+	color:#6C7666;
+}
+a:visited{
+	text-decoration:none;
+	color:#6C7666;
+}
+#header {
+	width:102%;
+	background-color:#F8F1E9;
+	height:90px;
+	line-height:80px;
+	margin-top:-10px;
+	margin-left:-5px;
+	border:none;
+}
+#header h1{
+	padding-left:300px;
+	margin-top:10px;
+	color:#6C7666;
+}
+#info {
+	width:102%;
+	background-color:#E2DDD9;
+	height:50px;
+	line-height:30px;
+	margin-top:-10px;
+	margin-left:-5px;
+	border-bottom:#999 thin inset;
+	border-top:#CCC thin inset;
+}
+#info h3{
+	padding-left:300px;
+	margin-top:10px;
+	color:#6C7666;
+}
+#corpo {
+    width: 80%;
+    height: 75%;
+    background-color:#F8F1E9;
+    margin-left:-10px;
+    line-height: 100px;
+    padding-left: 275px;
+	padding-right: 13px;
+    padding-top: 25px;
+    overflow: scroll;
+	overflow-x: hidden;
+    padding-bottom:30px;
+}
+
+#info_pessoais {
+	position: relative;
+	width: 550px;
+	height: auto;
+	background-color:chartreuse;
+	
+}
+
+.painel {
+	position:relative;
+	width:330px;
+	height:110px;
+	background:#E2DDD9;
+	box-shadow:#666 0px 3px 5px 0px;
+	line-height:100px;
+	padding:8px;
+	margin:10px;
+	margin-left:auto;
+	float:left;
+}
+.painel h3{
+	margin-bottom:2px;
+	color:#099;
+	text-align:left;
+}
+.painel table {
+	padding-left:12px;
+}
+.formulario {
+	width:600px;
+	height:auto;
+	margin-right:auto;
+	background:#E2DDD9;
+	box-shadow:#666 0px 3px 5px 0px;
+	margin-left:240px;
+	padding-right:50px;
+	padding-left: 50px;
+	padding-bottom:70px;
+	clear:both;
+	margin-bottom: 30px;
+}
+
+.formulario table{
+	position:relative;
+	padding-top: 30px;
+	margin-top:15px;
+	line-height:1.8;
+	font-size:18px;
+	margin-left:40px;
+}
+
+.formulario input{
+	width:320px;
+	height:30px;
+	padding:12px;
+	font-size:16px;
+	box-sizing:border-box;
+	border-radius:4px;
+}
+.formulario input[type=checkbox]{
+	width:20px;
+	height:20px;
+	padding:12px;
+	font-size:16px;
+	box-sizing:border-box;
+	border-radius:4px;
+}
+
+.formulario button{
+	position:relative;
+	float:right;
+	margin-top: 20px;
+	margin-right:auto;
+	padding:10px 24px;
+	font-size:16px;
+	border-radius:4px;
+	}
+.formulario select{
+	width:320px;
+	height:30px;
+	font-size:16px;
+	border-radius:4px;
+}
+
+.ns {
+	width:auto;
+	margin-left:0px;
+	padding: 6px;
+	height: auto;
+	background:#F8F1E9;
+	border-bottom: 1px ridge black;
+	
+}
+	
+.s{
+	width:auto;
+	margin-left:0px;
+	padding: 7px;
+	border-left: 1px ridge black;
+	border-top: 1px ridge black;
+	border-right:1px ridge black;
+	height:auto;
+	background-color:white;
+	
+	
+}
+
+.grande{
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-top:-34.5px;
+	padding-bottom:40px;
+	background-color: white;
+	border: 1px ridge black;
+}
+
+.absolute {
+	position:absolute;
+	height:100%;
+}
+/*Barra de rolagem*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius:16px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #ffffff;
+  -webkit-border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: #666;
+  -webkit-border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: #666;
+  -webkit-border-radius: 3px;
+}
