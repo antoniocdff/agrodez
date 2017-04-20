@@ -1,5 +1,5 @@
 angular.module("APP", []);
-	angular.module("APP").controller("ctrl", function($scope, $http, $location, $window){
+angular.module("APP").controller("ctrl", function($scope, $http, $location, $window){
 
 	$scope.unidades = ["hectares", "alqueires"];
 	$scope.fazenda = {area_total: 0, area_produtiva: 0, area_reserva: 0, valor_por_hectare: 0, geometria: ''};
@@ -40,6 +40,6 @@ angular.module("APP", []);
 			$window.alert("Área Produtiva mais a Reserva Averbada não podem ultrapassar a Área Total");
 		}
     };	
-	carregarFazenda();
+	// carregarFazenda();
 	
 });

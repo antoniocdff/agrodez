@@ -5,17 +5,54 @@
         <script src="angular.js"></script>
         <script src="angular-locale_pt-br.js"></script>
         <script src="nova_fazenda.js"></script>
-        <script src="vendor/jquery.js"></script>
-        <script src="vendor/leaflet/leaflet.js"></script>
-        <script src="vendor/leaflet-draw/leaflet.draw.js"></script>
-        <script src="vendor/leaflet-plugins/layer/tile/Google.js"></script>
+        <script src="vendor/jquery-3.2.1.min.js"></script>
+        <script src="vendor/stringify.js"></script>
+        <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" type="text/css" href="vendor/leaflet/leaflet.css">
-        <link rel="stylesheet" type="text/css" href="vendor/leaflet-draw/leaflet.draw.css">
+        <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+        <link rel="stylesheet" href="vendor/leaflet-draw/src/leaflet.draw.css" />
+        <script src="vendor/leaflet/leaflet.js"></script>
+
+        <script src="vendor/leaflet-draw/src/Leaflet.draw.js"></script>
+        <script src="vendor/leaflet-draw/src/Leaflet.Draw.Event.js"></script>
+
+        <script src="vendor/leaflet-draw/src/edit/handler/Edit.Poly.js"></script>
+        <script src="vendor/leaflet-draw/src/edit/handler/Edit.SimpleShape.js"></script>
+        <script src="vendor/leaflet-draw/src/edit/handler/Edit.Circle.js"></script>
+        <script src="vendor/leaflet-draw/src/edit/handler/Edit.Rectangle.js"></script>
+        <script src="vendor/leaflet-draw/src/edit/handler/Edit.Marker.js"></script>
+
+        <script src="vendor/leaflet-draw/src/draw/handler/Draw.Feature.js"></script>
+        <script src="vendor/leaflet-draw/src/draw/handler/Draw.Polyline.js"></script>
+        <script src="vendor/leaflet-draw/src/draw/handler/Draw.Polygon.js"></script>
+        <script src="vendor/leaflet-draw/src/draw/handler/Draw.SimpleShape.js"></script>
+        <script src="vendor/leaflet-draw/src/draw/handler/Draw.Rectangle.js"></script>
+        <script src="vendor/leaflet-draw/src/draw/handler/Draw.Circle.js"></script>
+        <script src="vendor/leaflet-draw/src/draw/handler/Draw.Marker.js"></script>
+
+        <script src="vendor/leaflet-draw/src/ext/TouchEvents.js"></script>
+        <script src="vendor/leaflet-draw/src/ext/LatLngUtil.js"></script>
+        <script src="vendor/leaflet-draw/src/ext/GeometryUtil.js"></script>
+        <script src="vendor/leaflet-draw/src/ext/LineUtil.Intersect.js"></script>
+        <script src="vendor/leaflet-draw/src/ext/Polyline.Intersect.js"></script>
+        <script src="vendor/leaflet-draw/src/ext/Polygon.Intersect.js"></script>
+
+        <script src="vendor/leaflet-draw/src/Control.Draw.js"></script>
+        <script src="vendor/leaflet-draw/src/Tooltip.js"></script>
+        <script src="vendor/leaflet-draw/src/Toolbar.js"></script>
+
+        <script src="vendor/leaflet-draw/src/draw/DrawToolbar.js"></script>
+        <script src="vendor/leaflet-draw/src/edit/EditToolbar.js"></script>
+        <script src="vendor/leaflet-draw/src/edit/handler/EditToolbar.Edit.js"></script>
+        <script src="vendor/leaflet-draw/src/edit/handler/EditToolbar.Delete.js"></script>
+
+
+        <script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
+        
         <script src="mapa.js"></script>
     </head>
     <body>
-        <div ng-include="'menu.html'" class="absolute"></div>
+        
         <div id="header">
             <h1>NOVA FAZENDA</h1>
         </div>
@@ -67,13 +104,11 @@
                     <tr>
                         <td>Geometria:</td><td><textarea id="id_geometria" readonly="readonly" ng-model="fazenda.geometria"></textarea></td>
                     </tr>
-                    <tr>
-                        <td><div id="map" class="span12" style="height: 400px"></div></td>
-                    </tr>
                 </table>
+            </div>
+                <div id="map" class="span12" style="height: 400px"></div>
                 <button ng-click="Salvar(fazenda)">Salvar</button>
                 <button ng-click="Voltar()">Voltar</button>
-            </div>
         </div>
         <script>
         mapaedita($('#id_fazenda').val());
